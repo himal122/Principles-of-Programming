@@ -1,0 +1,105 @@
+:root {
+    --color-black: #000000;
+    --color-dark-gray: #333333;
+    --color-dark-slate-gray: #2F4F4F;
+    --color-silver: #E5E4E2;
+    --color-light-silver: #C0C0C0;
+    --color-danger: #ff0000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color-black);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+.card {
+    border: 1px solid var(--color-light-silver);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+    background-color: var(--color-black) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-dark-slate-gray) !important;
+}
+
+.btn-secondary {
+    background-color: var(--color-black) !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-dark-slate-gray) !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-silver);
+}
+
+.actions-btn {
+    background: none;
+    border: none;
+    color: var(--color-black) !important;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.expand-btn {
+    cursor: pointer;
+    color: var(--color-dark-slate-gray);
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.details-row {
+    display: none;
+    background-color: var(--color-light-silver) !important;
+}
+
+.details-row td {
+    text-align: left;
+}
+
+.content {
+    flex: 1;
+}
+
+footer {
+    background-color: var(--color-black) !important;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-dark-gray);
+    color: var(--color-light-silver) !important;
+    font-size: 0.9rem;
+}
