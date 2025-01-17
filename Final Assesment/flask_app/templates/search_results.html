@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2>Search Results for "{{ query }}"</h2>
+  {% if results %}
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Stock Code</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>VAT Rate</th>
+        <th>Max Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in results %}
+      <tr>
+        <td>{{ item.stock_code }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.vat_rate }}</td>
+        <td>{{ item.max_quantity }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>No stock items match your search criteria.</p>
+  {% endif %}
+</div>
+{% endblock %}

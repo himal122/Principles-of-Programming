@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block extra_css %} 
+
+<style>
+    .login-card {
+        margin-top: 20px;
+        max-width: 400px; 
+        width: 100%;
+        border-radius: 0px !important;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    .login-card h2 {
+        color: black !important;
+        margin-top: -5px !important;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .form-check {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: 0px !important;
+    }
+
+    .form-check input {
+        margin-top: 0 !important;
+    }
+
+    /* Add underline to the input fields */
+    .form-control {
+        border: none;
+        border-radius: 0;
+        background-color: transparent !important;
+        border-bottom: 1.5px solid var(--color-black);
+        box-shadow: none;
+        outline: none;
+    }
+
+    .form-control:focus {
+        border-color: var(--color-black);
+        box-shadow: none;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="p-5 login-card">
+    <h2 class="text-center mb-4 text-primary">Login</h2>
+    <form method="POST" action="{{ url_for('login') }}">
+      {{ form.hidden_tag() }}
+      
+      <div class="mb-3">
+        {{ form.username.label(class="form-label") }}
+        {{ form.username(class="form-control") }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.password.label(class="form-label") }}
+        {{ form.password(class="form-control") }}
+      </div>
+
+      <div class="form-check mb-3">
+        {{ form.remember_me() }} {{ form.remember_me.label(class="form-check-label") }}
+      </div>
+
+      <div>
+        {{ form.submit(class="btn btn-primary w-100") }}
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
