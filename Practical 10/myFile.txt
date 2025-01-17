@@ -1,0 +1,3 @@
+The Object-Oriented Design Principles are the core of OOP programming.
+It's essential to learn the basics of Object-oriented programming. 
+Like Abstraction, Encapsulation, Polymorphism, and Inheritance.
